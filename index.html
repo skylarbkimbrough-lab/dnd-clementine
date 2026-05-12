@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,76 +9,76 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg: #050203;
-  --surface: #0f0b0b;
-  --surface2: #161010;
-  --border: #2a1a1a;
-  --gold: #d4aa5a;
-  --pale-gold: #f0dfa0;
-  --red: #d4364f;
-  --green: #65b882;
-  --purple: #c8a0c8;
-  --blue: #a0d8ef;
-  --text: #ede0d8;
-  --muted: #9a8590;
-  --fonts: Georgia, 'Times New Roman', serif;
-  --mono: 'Courier New', Courier, monospace;
+–bg: #050203;
+–surface: #0f0b0b;
+–surface2: #161010;
+–border: #2a1a1a;
+–gold: #d4aa5a;
+–pale-gold: #f0dfa0;
+–red: #d4364f;
+–green: #65b882;
+–purple: #c8a0c8;
+–blue: #a0d8ef;
+–text: #ede0d8;
+–muted: #9a8590;
+–fonts: Georgia, ‘Times New Roman’, serif;
+–mono: ‘Courier New’, Courier, monospace;
 }
 
 html, body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--fonts);
-  font-size: 17px;
-  line-height: 1.8;
-  min-height: 100vh;
+background: var(–bg);
+color: var(–text);
+font-family: var(–fonts);
+font-size: 17px;
+line-height: 1.8;
+min-height: 100vh;
 }
 
 /* ── NAV ── */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #030101;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 0;
-  padding: 0 24px;
-  overflow-x: auto;
+position: sticky;
+top: 0;
+z-index: 100;
+background: #030101;
+border-bottom: 1px solid var(–border);
+display: flex;
+align-items: center;
+gap: 0;
+padding: 0 24px;
+overflow-x: auto;
 }
 
 nav .site-title {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
-  padding: 16px 20px 16px 0;
-  margin-right: 12px;
-  border-right: 1px solid var(--border);
-  white-space: nowrap;
-  flex-shrink: 0;
+font-family: var(–mono);
+font-size: 11px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+padding: 16px 20px 16px 0;
+margin-right: 12px;
+border-right: 1px solid var(–border);
+white-space: nowrap;
+flex-shrink: 0;
 }
 
 nav button {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 16px 16px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
+background: none;
+border: none;
+color: var(–muted);
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 16px 16px;
+cursor: pointer;
+border-bottom: 2px solid transparent;
+transition: all 0.2s;
+white-space: nowrap;
+flex-shrink: 0;
 }
 
-nav button:hover { color: var(--text); }
-nav button.active { color: var(--gold); border-bottom-color: var(--gold); }
+nav button:hover { color: var(–text); }
+nav button.active { color: var(–gold); border-bottom-color: var(–gold); }
 
 /* ── TABS ── */
 .tab { display: none; max-width: 900px; margin: 0 auto; padding: 48px 32px 80px; }
@@ -85,479 +86,480 @@ nav button.active { color: var(--gold); border-bottom-color: var(--gold); }
 
 /* ── EDIT CONTROLS ── */
 .edit-toggle {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 200;
-  background: var(--gold);
-  color: #050203;
-  border: none;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 10px 18px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s;
+position: fixed;
+bottom: 24px;
+right: 24px;
+z-index: 200;
+background: var(–gold);
+color: #050203;
+border: none;
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 10px 18px;
+cursor: pointer;
+font-weight: bold;
+transition: all 0.2s;
 }
-.edit-toggle:hover { background: var(--pale-gold); }
-.edit-toggle.editing { background: var(--green); }
+.edit-toggle:hover { background: var(–pale-gold); }
+.edit-toggle.editing { background: var(–green); }
 
-[contenteditable="true"] {
-  outline: 1px dashed rgba(212,170,90,0.4);
-  background: rgba(212,170,90,0.04);
-  border-radius: 2px;
-  cursor: text;
+[contenteditable=“true”] {
+outline: 1px dashed rgba(212,170,90,0.4);
+background: rgba(212,170,90,0.04);
+border-radius: 2px;
+cursor: text;
 }
-[contenteditable="true"]:focus {
-  outline: 1px solid var(--gold);
-  background: rgba(212,170,90,0.07);
+[contenteditable=“true”]:focus {
+outline: 1px solid var(–gold);
+background: rgba(212,170,90,0.07);
 }
 
 .edit-hint {
-  display: none;
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  opacity: 0.7;
+display: none;
+font-family: var(–mono);
+font-size: 9px;
+color: var(–gold);
+letter-spacing: 0.2em;
+text-transform: uppercase;
+margin-bottom: 12px;
+opacity: 0.7;
 }
 body.editing .edit-hint { display: block; }
 
 /* ── TYPOGRAPHY ── */
 .overline {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 10px;
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.4em;
+text-transform: uppercase;
+color: var(–red);
+margin-bottom: 10px;
 }
 
 h1.char-name {
-  font-size: clamp(56px, 10vw, 88px);
-  font-weight: bold;
-  line-height: 0.9;
-  color: var(--pale-gold);
-  text-shadow: 0 0 40px rgba(212,170,90,0.4);
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
+font-size: clamp(56px, 10vw, 88px);
+font-weight: bold;
+line-height: 0.9;
+color: var(–pale-gold);
+text-shadow: 0 0 40px rgba(212,170,90,0.4);
+margin-bottom: 18px;
+letter-spacing: -0.02em;
 }
 
 .tagline {
-  font-style: italic;
-  font-size: 1.1em;
-  color: var(--text);
-  border-left: 3px solid var(--red);
-  padding-left: 18px;
-  line-height: 1.5;
+font-style: italic;
+font-size: 1.1em;
+color: var(–text);
+border-left: 3px solid var(–red);
+padding-left: 18px;
+line-height: 1.5;
 }
 
 .section-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 12px;
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.35em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 16px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(–border);
+display: flex;
+align-items: center;
+gap: 12px;
 }
 
 .section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--border), transparent);
+content: ‘’;
+flex: 1;
+height: 1px;
+background: linear-gradient(90deg, var(–border), transparent);
 }
 
 section.bio-section { margin-bottom: 52px; }
 
-p.bio-p { margin-bottom: 14px; color: var(--text); }
+p.bio-p { margin-bottom: 14px; color: var(–text); }
 p.bio-p:last-child { margin-bottom: 0; }
-em { color: var(--pale-gold); font-style: italic; }
+em { color: var(–pale-gold); font-style: italic; }
 
 /* ── PILLS ── */
 .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
 .pill {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border: 1px solid var(--border);
-  color: #ccd4dc;
+font-family: var(–mono);
+font-size: 9px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 4px 10px;
+border: 1px solid var(–border);
+color: #ccd4dc;
 }
-.pill.red { border-color: var(--red); color: var(--red); }
-.pill.green { border-color: var(--green); color: var(--green); }
+.pill.red { border-color: var(–red); color: var(–red); }
+.pill.green { border-color: var(–green); color: var(–green); }
 
 /* ── HEADER LAYOUT ── */
 .header-grid {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 40px;
-  align-items: start;
-  border-top: 3px solid var(--text);
-  border-bottom: 1px solid var(--text);
-  padding: 32px 0 28px;
-  margin-bottom: 52px;
+display: grid;
+grid-template-columns: 220px 1fr;
+gap: 40px;
+align-items: start;
+border-top: 3px solid var(–text);
+border-bottom: 1px solid var(–text);
+padding: 32px 0 28px;
+margin-bottom: 52px;
 }
 
 .portrait-wrap { position: relative; }
 .portrait-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  background: linear-gradient(135deg, var(--gold), #5a1f52, var(--red), var(--gold));
-  z-index: -1;
+content: ‘’;
+position: absolute;
+inset: -4px;
+background: linear-gradient(135deg, var(–gold), #5a1f52, var(–red), var(–gold));
+z-index: -1;
 }
 .portrait-wrap img { width: 100%; display: block; }
 
 /* ── STAT BLOCK ── */
 .stat-block {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-bottom: 12px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1px;
+background: var(–border);
+border: 1px solid var(–border);
+margin-bottom: 12px;
 }
 .stat-cell {
-  background: var(--surface);
-  padding: 14px 8px;
-  text-align: center;
+background: var(–surface);
+padding: 14px 8px;
+text-align: center;
 }
-.stat-mod { font-family: var(--mono); font-size: 11px; color: var(--red); font-weight: bold; display: block; }
-.stat-val { font-size: 28px; font-weight: bold; color: var(--pale-gold); line-height: 1; display: block; }
-.stat-name { font-family: var(--mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.stat-mod { font-family: var(–mono); font-size: 11px; color: var(–red); font-weight: bold; display: block; }
+.stat-val { font-size: 28px; font-weight: bold; color: var(–pale-gold); line-height: 1; display: block; }
+.stat-name { font-family: var(–mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(–muted); }
 
 /* ── SPELL CARDS ── */
 .spell-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-  margin: 12px 0 20px;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 12px;
+margin: 12px 0 20px;
 }
 .spell-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-top: 2px solid var(--green);
-  padding: 14px 12px;
+background: var(–surface);
+border: 1px solid var(–border);
+border-top: 2px solid var(–green);
+padding: 14px 12px;
 }
 .spell-card.cantrip { border-top-color: #5a1f52; }
-.spell-card-name { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pale-gold); margin-bottom: 3px; }
-.spell-card-type { font-family: var(--mono); font-size: 8px; color: var(--muted); margin-bottom: 4px; }
-.spell-card-meta { font-family: var(--mono); font-size: 8px; color: #5a7060; margin-bottom: 8px; }
+.spell-card-name { font-family: var(–mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(–pale-gold); margin-bottom: 3px; }
+.spell-card-type { font-family: var(–mono); font-size: 8px; color: var(–muted); margin-bottom: 4px; }
+.spell-card-meta { font-family: var(–mono); font-size: 8px; color: #5a7060; margin-bottom: 8px; }
 .spell-card-desc { font-size: 0.88em; font-style: italic; color: #c8b8b0; line-height: 1.4; }
 
 /* ── TRAIT CARDS ── */
 .trait-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-top: 12px;
 }
 .trait-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid #5a1f52;
-  padding: 14px 16px;
+background: var(–surface);
+border: 1px solid var(–border);
+border-left: 3px solid #5a1f52;
+padding: 14px 16px;
 }
-.trait-card.green { border-left-color: var(--green); }
-.trait-label { font-family: var(--mono); font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.trait-card.green { border-left-color: var(–green); }
+.trait-label { font-family: var(–mono); font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: var(–gold); margin-bottom: 6px; }
 
 /* ── WILD SHAPE BOX ── */
 .feature-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--green);
-  padding: 14px 18px;
-  margin-bottom: 24px;
+background: var(–surface);
+border: 1px solid var(–border);
+border-left: 3px solid var(–green);
+padding: 14px 18px;
+margin-bottom: 24px;
 }
-.feature-box-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 4px; }
-.feature-box-title { font-family: var(--mono); font-size: 12px; color: var(--pale-gold); margin-bottom: 8px; }
+.feature-box-label { font-family: var(–mono); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(–green); margin-bottom: 4px; }
+.feature-box-title { font-family: var(–mono); font-size: 12px; color: var(–pale-gold); margin-bottom: 8px; }
 
 /* ── DIVIDER ── */
 .divider {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 40px 0;
+display: flex;
+align-items: center;
+gap: 16px;
+margin: 40px 0;
 }
 .divider::before, .divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
+content: ‘’;
+flex: 1;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(–border), transparent);
 }
-.divider span { font-size: 16px; color: var(--gold); opacity: 0.7; }
+.divider span { font-size: 16px; color: var(–gold); opacity: 0.7; }
 
 /* ── BAD BUNNY BOX ── */
 .bouncer-box {
-  background: var(--surface);
-  border: 1px solid var(--gold);
-  padding: 20px 24px;
-  margin-top: 16px;
-  text-align: center;
-  position: relative;
+background: var(–surface);
+border: 1px solid var(–gold);
+padding: 20px 24px;
+margin-top: 16px;
+text-align: center;
+position: relative;
 }
 .bouncer-box::before {
-  content: '✦ STAFF RECORD ✦';
-  position: absolute;
-  top: -9px; left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  background: var(--bg);
-  padding: 0 10px;
+content: ‘✦ STAFF RECORD ✦’;
+position: absolute;
+top: -9px; left: 50%;
+transform: translateX(-50%);
+font-family: var(–mono);
+font-size: 8px;
+letter-spacing: 0.3em;
+color: var(–gold);
+background: var(–bg);
+padding: 0 10px;
 }
 .bouncer-name {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: var(--pale-gold);
-  display: block;
-  margin-bottom: 6px;
+font-size: 1.4em;
+font-weight: bold;
+color: var(–pale-gold);
+display: block;
+margin-bottom: 6px;
 }
 
 /* ── JOURNAL ── */
 .journal-form {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 24px;
-  margin-bottom: 32px;
+background: var(–surface);
+border: 1px solid var(–border);
+padding: 24px;
+margin-bottom: 32px;
 }
 .journal-form-title {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 18px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(–border);
 }
 .form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 12px;
 }
 .form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+display: flex;
+flex-direction: column;
+gap: 5px;
 }
 .form-field label {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
+font-family: var(–mono);
+font-size: 8px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–muted);
 }
 .form-field input, .form-field select, .form-field textarea {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-family: var(--fonts);
-  font-size: 14px;
-  padding: 8px 10px;
-  outline: none;
-  transition: border-color 0.2s;
-  resize: vertical;
+background: var(–bg);
+border: 1px solid var(–border);
+color: var(–text);
+font-family: var(–fonts);
+font-size: 14px;
+padding: 8px 10px;
+outline: none;
+transition: border-color 0.2s;
+resize: vertical;
 }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-  border-color: var(--gold);
+border-color: var(–gold);
 }
-.form-field select option { background: var(--surface); }
+.form-field select option { background: var(–surface); }
 .form-full { grid-column: 1 / -1; }
 
 .roll-row {
-  display: grid;
-  grid-template-columns: 1fr 80px 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
+display: grid;
+grid-template-columns: 1fr 80px 1fr;
+gap: 12px;
+margin-bottom: 12px;
 }
 
 .btn {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s;
+font-family: var(–mono);
+font-size: 10px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-weight: bold;
+transition: all 0.2s;
 }
-.btn-gold { background: var(--gold); color: #050203; }
-.btn-gold:hover { background: var(--pale-gold); }
-.btn-red { background: transparent; border: 1px solid var(--red); color: var(--red); }
-.btn-red:hover { background: var(--red); color: #050203; }
+.btn-gold { background: var(–gold); color: #050203; }
+.btn-gold:hover { background: var(–pale-gold); }
+.btn-red { background: transparent; border: 1px solid var(–red); color: var(–red); }
+.btn-red:hover { background: var(–red); color: #050203; }
 .btn-sm { padding: 5px 10px; font-size: 9px; }
 
 /* ── JOURNAL ENTRIES ── */
 .journal-entries { display: flex; flex-direction: column; gap: 16px; }
 
 .journal-entry {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--gold);
-  padding: 16px 20px;
-  position: relative;
+background: var(–surface);
+border: 1px solid var(–border);
+border-left: 3px solid var(–gold);
+padding: 16px 20px;
+position: relative;
 }
-.journal-entry.crit { border-left-color: var(--pale-gold); }
-.journal-entry.fail { border-left-color: var(--red); }
-.journal-entry.success { border-left-color: var(--green); }
+.journal-entry.crit { border-left-color: var(–pale-gold); }
+.journal-entry.fail { border-left-color: var(–red); }
+.journal-entry.success { border-left-color: var(–green); }
 
 .entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  gap: 8px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 10px;
+flex-wrap: wrap;
+gap: 8px;
 }
 .entry-meta {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
+font-family: var(–mono);
+font-size: 8px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–muted);
 }
 .entry-session {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
+font-family: var(–mono);
+font-size: 9px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–gold);
 }
 .entry-action {
-  font-size: 1.05em;
-  font-weight: bold;
-  color: var(--pale-gold);
-  margin-bottom: 6px;
+font-size: 1.05em;
+font-weight: bold;
+color: var(–pale-gold);
+margin-bottom: 6px;
 }
 .entry-roll-line {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
+display: flex;
+gap: 12px;
+align-items: center;
+flex-wrap: wrap;
+margin-bottom: 8px;
 }
 .roll-badge {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: bold;
-  padding: 3px 10px;
-  border: 1px solid var(--border);
-  color: var(--pale-gold);
+font-family: var(–mono);
+font-size: 11px;
+font-weight: bold;
+padding: 3px 10px;
+border: 1px solid var(–border);
+color: var(–pale-gold);
 }
-.roll-badge.nat20 { border-color: var(--pale-gold); color: var(--pale-gold); background: rgba(240,223,160,0.1); }
-.roll-badge.nat1 { border-color: var(--red); color: var(--red); }
+.roll-badge.nat20 { border-color: var(–pale-gold); color: var(–pale-gold); background: rgba(240,223,160,0.1); }
+.roll-badge.nat1 { border-color: var(–red); color: var(–red); }
 .outcome-badge {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border: 1px solid;
+font-family: var(–mono);
+font-size: 9px;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+padding: 3px 10px;
+border: 1px solid;
 }
-.outcome-badge.success { border-color: var(--green); color: var(--green); }
-.outcome-badge.fail { border-color: var(--red); color: var(--red); }
-.outcome-badge.crit { border-color: var(--pale-gold); color: var(--pale-gold); }
+.outcome-badge.success { border-color: var(–green); color: var(–green); }
+.outcome-badge.fail { border-color: var(–red); color: var(–red); }
+.outcome-badge.crit { border-color: var(–pale-gold); color: var(–pale-gold); }
 .outcome-badge.partial { border-color: #8b8b00; color: #d4d400; }
 
-.entry-npc { font-family: var(--mono); font-size: 9px; color: var(--muted); margin-bottom: 6px; }
-.entry-notes { font-style: italic; font-size: 0.92em; color: #c8b8b0; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 8px; margin-top: 8px; }
+.entry-npc { font-family: var(–mono); font-size: 9px; color: var(–muted); margin-bottom: 6px; }
+.entry-notes { font-style: italic; font-size: 0.92em; color: #c8b8b0; line-height: 1.5; border-top: 1px solid var(–border); padding-top: 8px; margin-top: 8px; }
 .entry-delete { position: absolute; top: 12px; right: 12px; }
 
 .journal-empty {
-  text-align: center;
-  font-style: italic;
-  color: var(--muted);
-  padding: 48px 24px;
-  border: 1px dashed var(--border);
+text-align: center;
+font-style: italic;
+color: var(–muted);
+padding: 48px 24px;
+border: 1px dashed var(–border);
 }
 
 .journal-filters {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  align-items: center;
+display: flex;
+gap: 8px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+align-items: center;
 }
 .journal-filters label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
+font-family: var(–mono);
+font-size: 9px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–muted);
 }
 .journal-filters select, .journal-filters input {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-family: var(--mono);
-  font-size: 10px;
-  padding: 5px 8px;
-  outline: none;
+background: var(–surface);
+border: 1px solid var(–border);
+color: var(–text);
+font-family: var(–mono);
+font-size: 10px;
+padding: 5px 8px;
+outline: none;
 }
 
 /* ── INCIDENT BOX ── */
 .incident-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--red);
-  padding: 18px 20px;
-  position: relative;
-  margin-top: 12px;
+background: var(–surface);
+border: 1px solid var(–border);
+border-left: 3px solid var(–red);
+padding: 18px 20px;
+position: relative;
+margin-top: 12px;
 }
 .incident-label {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 6px;
+font-family: var(–mono);
+font-size: 8px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–red);
+margin-bottom: 6px;
 }
 .incident-title {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: var(--pale-gold);
-  margin-bottom: 10px;
+font-size: 1.1em;
+font-weight: bold;
+color: var(–pale-gold);
+margin-bottom: 10px;
 }
 
 /* ── DEITY SECTION ── */
 .deity-grid {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 20px;
-  align-items: start;
+display: grid;
+grid-template-columns: 64px 1fr;
+gap: 20px;
+align-items: start;
 }
-.deity-name { font-size: 1.2em; font-weight: bold; color: var(--pale-gold); margin-bottom: 5px; }
-.deity-title { font-family: var(--mono); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+.deity-name { font-size: 1.2em; font-weight: bold; color: var(–pale-gold); margin-bottom: 5px; }
+.deity-title { font-family: var(–mono); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(–blue); margin-bottom: 10px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-  .header-grid { grid-template-columns: 1fr; }
-  .portrait-wrap { max-width: 200px; margin: 0 auto; }
-  .stat-block { grid-template-columns: repeat(2,1fr); }
-  .trait-grid { grid-template-columns: 1fr; }
-  .form-grid { grid-template-columns: 1fr; }
-  .roll-row { grid-template-columns: 1fr 1fr; }
-  .tab { padding: 32px 20px 60px; }
+.header-grid { grid-template-columns: 1fr; }
+.portrait-wrap { max-width: 200px; margin: 0 auto; }
+.stat-block { grid-template-columns: repeat(2,1fr); }
+.trait-grid { grid-template-columns: 1fr; }
+.form-grid { grid-template-columns: 1fr; }
+.roll-row { grid-template-columns: 1fr 1fr; }
+.tab { padding: 32px 20px 60px; }
 }
 
 #portraitWrap:hover #portraitOverlay { display:flex !important; }
 </style>
+
 </head>
 <body>
 
@@ -576,6 +578,7 @@ em { color: var(--pale-gold); font-style: italic; }
 <!-- ══════════════════════════════════════════════════════════════
      TAB: OVERVIEW
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab active" id="tab-overview">
   <div class="header-grid">
     <div class="portrait-wrap">
@@ -589,10 +592,10 @@ em { color: var(--pale-gold); font-style: italic; }
       <div class="overline" data-save="overline">Character Dossier · D&amp;D 5e</div>
       <h1 class="char-name" data-save="charname">Clem</h1>
       <div class="pills">
-        <span class="pill red">Half-Drow</span>
-        <span class="pill green">Druid Lv. 3</span>
-        <span class="pill">Chaotic Good</span>
-        <span class="pill">Hermit</span>
+        <span class="pill red" data-save="pill-race">Half-Drow</span>
+        <span class="pill green" data-save="pill-class">Druid Lv. 3</span>
+        <span class="pill" data-save="pill-align">Chaotic Good</span>
+        <span class="pill" data-save="pill-bg">Hermit</span>
       </div>
       <div class="tagline" data-save="tagline">Barkeep. Herbalist. Force of nature. She will charm you, heal you, set you on fire, and deny all three — in that order.</div>
     </div>
@@ -601,12 +604,12 @@ em { color: var(--pale-gold); font-style: italic; }
   <section class="bio-section">
     <div class="section-label">Ability Scores</div>
     <div class="stat-block" id="statBlock">
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-str">+0</span><span class="stat-val" data-save="val-str">12</span><span class="stat-name">Strength</span></div>
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-dex">+3</span><span class="stat-val" data-save="val-dex">17</span><span class="stat-name">Dexterity</span></div>
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-con">+1</span><span class="stat-val" data-save="val-con">14</span><span class="stat-name">Constitution</span></div>
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-int">+1</span><span class="stat-val" data-save="val-int">13</span><span class="stat-name">Intelligence</span></div>
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-wis">+2</span><span class="stat-val" data-save="val-wis">14</span><span class="stat-name">Wisdom</span></div>
-      <div class="stat-cell"><span class="stat-mod" data-save="mod-cha">+0</span><span class="stat-val" data-save="val-cha">9</span><span class="stat-name">Charisma</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-str">+0</span><span class="stat-val" data-save="val-str">12</span><span class="stat-name" data-save="sname-str">Strength</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-dex">+3</span><span class="stat-val" data-save="val-dex">17</span><span class="stat-name" data-save="sname-dex">Dexterity</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-con">+1</span><span class="stat-val" data-save="val-con">14</span><span class="stat-name" data-save="sname-con">Constitution</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-int">+1</span><span class="stat-val" data-save="val-int">13</span><span class="stat-name" data-save="sname-int">Intelligence</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-wis">+2</span><span class="stat-val" data-save="val-wis">14</span><span class="stat-name" data-save="sname-wis">Wisdom</span></div>
+      <div class="stat-cell"><span class="stat-mod" data-save="mod-cha">+0</span><span class="stat-val" data-save="val-cha">9</span><span class="stat-name" data-save="sname-cha">Charisma</span></div>
     </div>
     <p class="bio-p" style="font-style:italic;font-size:0.88em;color:var(--muted);" data-save="stat-note">A CHA of 9 on a woman who flirts with literally everyone is a character study in itself.</p>
   </section>
@@ -617,29 +620,29 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="section-label">Combat</div>
     <div class="trait-grid">
       <div class="trait-card">
-        <div class="trait-label">Armor Class</div>
+        <div class="trait-label" data-save="label-ac">Armor Class</div>
         <p class="bio-p" data-save="combat-ac">8 (no armor)</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Hit Points</div>
+        <div class="trait-label" data-save="label-hp">Hit Points</div>
         <p class="bio-p" data-save="combat-hp">19 (Lv. 3 max)</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Speed</div>
+        <div class="trait-label" data-save="label-spd">Speed</div>
         <p class="bio-p" data-save="combat-spd">30 ft.</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Initiative</div>
+        <div class="trait-label" data-save="label-init">Initiative</div>
         <p class="bio-p" data-save="combat-init">+3 (DEX)</p>
       </div>
     </div>
   </section>
 </div>
 
-
 <!-- ══════════════════════════════════════════════════════════════
      TAB: LORE
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab" id="tab-lore">
   <div class="edit-hint">Click any text to edit it. Changes save automatically.</div>
 
@@ -697,17 +700,17 @@ em { color: var(--pale-gold); font-style: italic; }
   </section>
 </div>
 
-
 <!-- ══════════════════════════════════════════════════════════════
      TAB: SPELLS
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab" id="tab-spells">
   <div class="edit-hint">Click spell descriptions to edit them.</div>
 
   <section class="bio-section">
     <div class="feature-box">
-      <div class="feature-box-label">Class Feature · Druid Lv. 2</div>
-      <div class="feature-box-title">Wild Shape</div>
+      <div class="feature-box-label" data-save="feature-label">Class Feature · Druid Lv. 2</div>
+      <div class="feature-box-title" data-save="feature-title">Wild Shape</div>
       <p class="bio-p" style="font-size:0.9em;" data-save="wildshape">As an action, assume the shape of a beast she has seen before — up to CR 1/4, no flying or swimming speed at her level. Twice per short rest, up to 1.5 hours. Retains concentration spells while shifted. The party has not yet agreed on whether this is useful or terrifying.</p>
     </div>
   </section>
@@ -716,15 +719,15 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="section-label">Cantrips</div>
     <div class="spell-grid">
       <div class="spell-card cantrip">
-        <div class="spell-card-name">Faerie Fire</div>
-        <div class="spell-card-type">Cantrip · Evocation · Concentration 1 min</div>
-        <div class="spell-card-meta">Range: 60 ft · V only</div>
+        <div class="spell-card-name" data-save="sname-faerie">Faerie Fire</div>
+        <div class="spell-card-type" data-save="stype-faerie">Cantrip · Evocation · Concentration 1 min</div>
+        <div class="spell-card-meta" data-save="smeta-faerie">Range: 60 ft · V only</div>
         <div class="spell-card-desc" data-save="spell-faerie">Outlines everything in a 20-ft cube in violet, blue, or green light. Creatures that fail a DEX save grant advantage on attack rolls and can't be invisible. She picks violet. Always violet.</div>
       </div>
       <div class="spell-card cantrip">
-        <div class="spell-card-name">Dancing Lights</div>
-        <div class="spell-card-type">Cantrip · Evocation · Concentration 1 min</div>
-        <div class="spell-card-meta">Range: 120 ft · V, S, M</div>
+        <div class="spell-card-name" data-save="sname-dancing">Dancing Lights</div>
+        <div class="spell-card-type" data-save="stype-dancing">Cantrip · Evocation · Concentration 1 min</div>
+        <div class="spell-card-meta" data-save="smeta-dancing">Range: 120 ft · V, S, M</div>
         <div class="spell-card-desc" data-save="spell-dancing">Four floating lights she can move 60 ft per turn. Can merge into a humanoid shape. She has absolutely used this to mess with people in the dark.</div>
       </div>
     </div>
@@ -734,39 +737,39 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="section-label">Prepared Spells</div>
     <div class="spell-grid">
       <div class="spell-card">
-        <div class="spell-card-name">Flame Blade</div>
-        <div class="spell-card-type">2nd · Evocation · Concentration 10 min</div>
-        <div class="spell-card-meta">Range: Self · V, S, M · Bonus action · 3d6 fire, WIS</div>
+        <div class="spell-card-name" data-save="sname-flame">Flame Blade</div>
+        <div class="spell-card-type" data-save="stype-flame">2nd · Evocation · Concentration 10 min</div>
+        <div class="spell-card-meta" data-save="smeta-flame">Range: Self · V, S, M · Bonus action · 3d6 fire, WIS</div>
         <div class="spell-card-desc" data-save="spell-flame">A sword of pure fire conjured from nothing. She has never once looked sorry about it.</div>
       </div>
       <div class="spell-card">
-        <div class="spell-card-name">Lesser Restoration</div>
-        <div class="spell-card-type">2nd · Abjuration · Instantaneous</div>
-        <div class="spell-card-meta">Range: Touch · V, S</div>
+        <div class="spell-card-name" data-save="sname-resto">Lesser Restoration</div>
+        <div class="spell-card-type" data-save="stype-resto">2nd · Abjuration · Instantaneous</div>
+        <div class="spell-card-meta" data-save="smeta-resto">Range: Touch · V, S</div>
         <div class="spell-card-desc" data-save="spell-resto">Ends disease or one condition: blinded, deafened, paralyzed, or poisoned. She charges for the potions version. This one she usually gives for free. Usually.</div>
       </div>
       <div class="spell-card">
-        <div class="spell-card-name">Speak w/ Animals</div>
-        <div class="spell-card-type">1st · Divination · Ritual · 10 min</div>
-        <div class="spell-card-meta">Range: Self · V, S</div>
+        <div class="spell-card-name" data-save="sname-animals">Speak w/ Animals</div>
+        <div class="spell-card-type" data-save="stype-animals">1st · Divination · Ritual · 10 min</div>
+        <div class="spell-card-meta" data-save="smeta-animals">Range: Self · V, S</div>
         <div class="spell-card-desc" data-save="spell-animals">She has full conversations. The animals always have opinions. She listens to every one of them.</div>
       </div>
       <div class="spell-card">
-        <div class="spell-card-name">Ice Knife</div>
-        <div class="spell-card-type">1st · Conjuration · Instantaneous</div>
-        <div class="spell-card-meta">Range: 60 ft · S, M · 1d10 pierce + 2d6 cold</div>
+        <div class="spell-card-name" data-save="sname-ice">Ice Knife</div>
+        <div class="spell-card-type" data-save="stype-ice">1st · Conjuration · Instantaneous</div>
+        <div class="spell-card-meta" data-save="smeta-ice">Range: 60 ft · S, M · 1d10 pierce + 2d6 cold</div>
         <div class="spell-card-desc" data-save="spell-ice">This one comes naturally. More naturally than most things on the surface do.</div>
       </div>
       <div class="spell-card">
-        <div class="spell-card-name">Thunderwave</div>
-        <div class="spell-card-type">1st · Evocation · Instantaneous</div>
-        <div class="spell-card-meta">Range: Self (15-ft cube) · V, S · 2d8 thunder</div>
+        <div class="spell-card-name" data-save="sname-thunder">Thunderwave</div>
+        <div class="spell-card-type" data-save="stype-thunder">1st · Evocation · Instantaneous</div>
+        <div class="spell-card-meta" data-save="smeta-thunder">Range: Self (15-ft cube) · V, S · 2d8 thunder</div>
         <div class="spell-card-desc" data-save="spell-thunder">She has used this indoors. On purpose. The party knows the sound by now.</div>
       </div>
       <div class="spell-card">
-        <div class="spell-card-name">Healing Word</div>
-        <div class="spell-card-type">1st · Evocation · Instantaneous</div>
-        <div class="spell-card-meta">Range: 60 ft · V · Bonus action · 1d4+WIS</div>
+        <div class="spell-card-name" data-save="sname-healing">Healing Word</div>
+        <div class="spell-card-type" data-save="stype-healing">1st · Evocation · Instantaneous</div>
+        <div class="spell-card-meta" data-save="smeta-healing">Range: 60 ft · V · Bonus action · 1d4+WIS</div>
         <div class="spell-card-desc" data-save="spell-healing">She can do this from across the room without looking up from her drink. She does. Regularly.</div>
       </div>
     </div>
@@ -774,10 +777,10 @@ em { color: var(--pale-gold); font-style: italic; }
   </section>
 </div>
 
-
 <!-- ══════════════════════════════════════════════════════════════
      TAB: TRAITS
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab" id="tab-traits">
   <div class="edit-hint">Click any text to edit it.</div>
 
@@ -785,19 +788,19 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="section-label">Traits &amp; Nature</div>
     <div class="trait-grid">
       <div class="trait-card">
-        <div class="trait-label">The Freedom Principle</div>
+        <div class="trait-label" data-save="tlabel-freedom">The Freedom Principle</div>
         <p class="bio-p" data-save="trait-freedom">Answers to no one. Built a bar so she'd always have somewhere to go that's hers. Built an apothecary so she'd never need to ask for anything.</p>
       </div>
       <div class="trait-card green">
-        <div class="trait-label">Druid's Communion</div>
+        <div class="trait-label" data-save="tlabel-druid">Druid's Communion</div>
         <p class="bio-p" data-save="trait-druid">Speaks to animals. The forest tells her things. She meditates for 4 hours instead of sleeping and wakes knowing things she shouldn't.</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Social Animal</div>
+        <div class="trait-label" data-save="tlabel-social">Social Animal</div>
         <p class="bio-p" data-save="trait-social">Flirts with everyone. Means it with no one in particular. It's not manipulation — it's just how she moves through the world.</p>
       </div>
       <div class="trait-card green">
-        <div class="trait-label">The Chaos Factor</div>
+        <div class="trait-label" data-save="tlabel-chaos">The Chaos Factor</div>
         <p class="bio-p" data-save="trait-chaos">The party tolerates her. The party loves her. The party has learned to brace for impact whenever she smiles like that.</p>
       </div>
     </div>
@@ -809,29 +812,29 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="section-label">Special Abilities</div>
     <div class="trait-grid">
       <div class="trait-card green">
-        <div class="trait-label">Fae Ancestry</div>
+        <div class="trait-label" data-save="tlabel-fae">Fae Ancestry</div>
         <p class="bio-p" data-save="trait-fae">Advantage on saving throws against being charmed. Magic cannot put her to sleep.</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Darkvision</div>
+        <div class="trait-label" data-save="tlabel-dark">Darkvision</div>
         <p class="bio-p" data-save="trait-dark">Sees in dim light as bright, darkness as dim, up to 120 feet. Sunlight sensitivity applies in direct sunlight.</p>
       </div>
       <div class="trait-card">
-        <div class="trait-label">Drow Weapon Training</div>
+        <div class="trait-label" data-save="tlabel-weapon">Drow Weapon Training</div>
         <p class="bio-p" data-save="trait-weapon">Proficient with rapiers, shortswords, and hand crossbows.</p>
       </div>
       <div class="trait-card green">
-        <div class="trait-label">Medicine &amp; Perception</div>
+        <div class="trait-label" data-save="tlabel-skills">Medicine &amp; Perception</div>
         <p class="bio-p" data-save="trait-skills">+2 proficiency in Medicine (WIS) and Perception (WIS). Passive Perception: 13.</p>
       </div>
     </div>
   </section>
 </div>
 
-
 <!-- ══════════════════════════════════════════════════════════════
      TAB: THE ESTABLISHMENT
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab" id="tab-establishment">
   <div class="edit-hint">Click any text to edit it.</div>
 
@@ -840,28 +843,31 @@ em { color: var(--pale-gold); font-style: italic; }
     <p class="bio-p" data-save="est-p1">Clem's bar is hers in the way that matters — built, stocked, and run on her own terms. The apothecary in the back does a brisk business. She doesn't ask too many questions about what people need the tinctures for. The bar up front is warm, the drinks are strong, and the atmosphere is whatever she decides it is that evening.</p>
     <p class="bio-p" data-save="est-p2">Security is handled.</p>
 
-    <div class="bouncer-box">
-      <span class="bouncer-name" data-save="bunny-name">Bad Bunny</span>
-      <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:90px;display:block;margin:8px auto;">
-        <ellipse cx="60" cy="68" rx="22" ry="18" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
-        <ellipse cx="60" cy="44" rx="14" ry="12" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
-        <path d="M52 34 Q48 14 50 6 Q54 14 56 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <path d="M68 34 Q70 12 70 4 Q72 12 72 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <circle cx="55" cy="42" r="1.5" fill="#d4aa5a"/>
-        <circle cx="65" cy="42" r="1.5" fill="#d4aa5a"/>
-        <line x1="52" y1="39" x2="58" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="62" y1="39" x2="68" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-        <ellipse cx="60" cy="47" rx="2" ry="1.2" fill="#d4aa5a" opacity="0.8"/>
-        <line x1="57" y1="50" x2="63" y2="50" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M38 62 Q44 58 50 62 Q48 70 42 72 Q36 70 38 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-        <path d="M82 62 Q76 58 70 62 Q72 70 78 72 Q84 70 82 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-        <ellipse cx="50" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-        <ellipse cx="70" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-        <circle cx="82" cy="72" r="5" stroke="#d4aa5a" stroke-width="1.2" fill="none" stroke-dasharray="2 1.5"/>
-        <rect x="52" y="55" width="16" height="9" rx="1.5" stroke="#d4aa5a" stroke-width="0.8" fill="none" opacity="0.6"/>
-      </svg>
-      <p class="bio-p" style="font-style:italic;" data-save="bunny-desc">Bouncer. Loyal. Does not elaborate. Has never once needed to.</p>
-    </div>
+```
+<div class="bouncer-box" data-save="bouncer-box">
+  <span class="bouncer-name" data-save="bunny-name">Bad Bunny</span>
+  <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:90px;display:block;margin:8px auto;">
+    <ellipse cx="60" cy="68" rx="22" ry="18" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
+    <ellipse cx="60" cy="44" rx="14" ry="12" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
+    <path d="M52 34 Q48 14 50 6 Q54 14 56 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M68 34 Q70 12 70 4 Q72 12 72 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="55" cy="42" r="1.5" fill="#d4aa5a"/>
+    <circle cx="65" cy="42" r="1.5" fill="#d4aa5a"/>
+    <line x1="52" y1="39" x2="58" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="62" y1="39" x2="68" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+    <ellipse cx="60" cy="47" rx="2" ry="1.2" fill="#d4aa5a" opacity="0.8"/>
+    <line x1="57" y1="50" x2="63" y2="50" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M38 62 Q44 58 50 62 Q48 70 42 72 Q36 70 38 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+    <path d="M82 62 Q76 58 70 62 Q72 70 78 72 Q84 70 82 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+    <ellipse cx="50" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+    <ellipse cx="70" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+    <circle cx="82" cy="72" r="5" stroke="#d4aa5a" stroke-width="1.2" fill="none" stroke-dasharray="2 1.5"/>
+    <rect x="52" y="55" width="16" height="9" rx="1.5" stroke="#d4aa5a" stroke-width="0.8" fill="none" opacity="0.6"/>
+  </svg>
+  <p class="bio-p" style="font-style:italic;" data-save="bunny-desc">Bouncer. Loyal. Does not elaborate. Has never once needed to.</p>
+</div>
+```
+
   </section>
 
   <div class="divider"><span>✦</span></div>
@@ -869,7 +875,7 @@ em { color: var(--pale-gold); font-style: italic; }
   <section class="bio-section">
     <div class="section-label">Field Notes</div>
     <div class="incident-box">
-      <div class="incident-label">Incident Report · Session Unknown</div>
+      <div class="incident-label" data-save="incident-label">Incident Report · Session Unknown</div>
       <div class="incident-title" data-save="incident-title">The Dwarf Incident</div>
       <p class="bio-p" data-save="incident-p1">She meant to threaten him. Playfully. It was going to be charming. She had a whole thing planned.</p>
       <p class="bio-p" data-save="incident-p2">She rolled a 20.</p>
@@ -897,10 +903,10 @@ em { color: var(--pale-gold); font-style: italic; }
   </section>
 </div>
 
-
 <!-- ══════════════════════════════════════════════════════════════
      TAB: JOURNAL
 ═══════════════════════════════════════════════════════════════ -->
+
 <div class="tab" id="tab-journal">
 
   <div class="journal-form">
@@ -988,7 +994,6 @@ em { color: var(--pale-gold); font-style: italic; }
     <div class="journal-empty">No entries yet. Log your first action above.</div>
   </div>
 </div>
-
 
 <script>
 // ── TABS ───────────────────────────────────────────────────────────────────────
@@ -1197,5 +1202,6 @@ renderEntries();
 // Set today's date in journal form
 document.getElementById('j-date').valueAsDate = new Date();
 </script>
+
 </body>
 </html>
