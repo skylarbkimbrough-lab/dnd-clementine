@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,557 +8,557 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-–bg: #050203;
-–surface: #0f0b0b;
-–surface2: #161010;
-–border: #2a1a1a;
-–gold: #d4aa5a;
-–pale-gold: #f0dfa0;
-–red: #d4364f;
-–green: #65b882;
-–purple: #c8a0c8;
-–blue: #a0d8ef;
-–text: #ede0d8;
-–muted: #9a8590;
-–fonts: Georgia, ‘Times New Roman’, serif;
-–mono: ‘Courier New’, Courier, monospace;
+  --bg: #050203;
+  --surface: #0f0b0b;
+  --surface2: #161010;
+  --border: #2a1a1a;
+  --gold: #d4aa5a;
+  --pale-gold: #f0dfa0;
+  --red: #d4364f;
+  --green: #65b882;
+  --purple: #c8a0c8;
+  --blue: #a0d8ef;
+  --text: #ede0d8;
+  --muted: #9a8590;
+  --fonts: Georgia, 'Times New Roman', serif;
+  --mono: 'Courier New', Courier, monospace;
 }
 
 html, body {
-background: var(–bg);
-color: var(–text);
-font-family: var(–fonts);
-font-size: 17px;
-line-height: 1.8;
-min-height: 100vh;
+  background: #050203 !important;
+  background-color: #050203 !important;
+  color: #ede0d8 !important;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.8;
+  min-height: 100vh;
 }
 
 /* ── NAV ── */
 nav {
-position: sticky;
-top: 0;
-z-index: 100;
-background: #030101;
-border-bottom: 1px solid var(–border);
-display: flex;
-align-items: center;
-gap: 0;
-padding: 0 24px;
-overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #030101 !important;
+  border-bottom: 1px solid #2a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 24px;
+  overflow-x: auto;
 }
 
 nav .site-title {
-font-family: var(–mono);
-font-size: 11px;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–gold);
-padding: 16px 20px 16px 0;
-margin-right: 12px;
-border-right: 1px solid var(–border);
-white-space: nowrap;
-flex-shrink: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d4aa5a;
+  padding: 16px 20px 16px 0;
+  margin-right: 12px;
+  border-right: 1px solid #2a1a1a;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 nav button {
-background: none;
-border: none;
-color: var(–muted);
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-padding: 16px 16px;
-cursor: pointer;
-border-bottom: 2px solid transparent;
-transition: all 0.2s;
-white-space: nowrap;
-flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #9a8590;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-nav button:hover { color: var(–text); }
-nav button.active { color: var(–gold); border-bottom-color: var(–gold); }
+nav button:hover { color: #ede0d8; }
+nav button.active { color: #d4aa5a; border-bottom-color: #d4aa5a; }
 
 /* ── TABS ── */
-.tab { display: none; max-width: 900px; margin: 0 auto; padding: 48px 32px 80px; }
+.tab { display: none; max-width: 900px; margin: 0 auto; padding: 48px 32px 80px; background: #050203; }
 .tab.active { display: block; }
 
 /* ── EDIT CONTROLS ── */
 .edit-toggle {
-position: fixed;
-bottom: 24px;
-right: 24px;
-z-index: 200;
-background: var(–gold);
-color: #050203;
-border: none;
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-padding: 10px 18px;
-cursor: pointer;
-font-weight: bold;
-transition: all 0.2s;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #d4aa5a;
+  color: #050203;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
 }
-.edit-toggle:hover { background: var(–pale-gold); }
-.edit-toggle.editing { background: var(–green); }
+.edit-toggle:hover { background: #f0dfa0; }
+.edit-toggle.editing { background: #65b882; }
 
-[contenteditable=“true”] {
-outline: 1px dashed rgba(212,170,90,0.4);
-background: rgba(212,170,90,0.04);
-border-radius: 2px;
-cursor: text;
+[contenteditable="true"] {
+  outline: 1px dashed rgba(212,170,90,0.4);
+  background: rgba(212,170,90,0.04);
+  border-radius: 2px;
+  cursor: text;
 }
-[contenteditable=“true”]:focus {
-outline: 1px solid var(–gold);
-background: rgba(212,170,90,0.07);
+[contenteditable="true"]:focus {
+  outline: 1px solid #d4aa5a;
+  background: rgba(212,170,90,0.07);
 }
 
 .edit-hint {
-display: none;
-font-family: var(–mono);
-font-size: 9px;
-color: var(–gold);
-letter-spacing: 0.2em;
-text-transform: uppercase;
-margin-bottom: 12px;
-opacity: 0.7;
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  color: #d4aa5a;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.7;
 }
 body.editing .edit-hint { display: block; }
 
 /* ── TYPOGRAPHY ── */
 .overline {
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.4em;
-text-transform: uppercase;
-color: var(–red);
-margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #d4364f;
+  margin-bottom: 10px;
 }
 
 h1.char-name {
-font-size: clamp(56px, 10vw, 88px);
-font-weight: bold;
-line-height: 0.9;
-color: var(–pale-gold);
-text-shadow: 0 0 40px rgba(212,170,90,0.4);
-margin-bottom: 18px;
-letter-spacing: -0.02em;
+  font-size: clamp(56px, 10vw, 88px);
+  font-weight: bold;
+  line-height: 0.9;
+  color: #f0dfa0;
+  text-shadow: 0 0 40px rgba(212,170,90,0.4);
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
 }
 
 .tagline {
-font-style: italic;
-font-size: 1.1em;
-color: var(–text);
-border-left: 3px solid var(–red);
-padding-left: 18px;
-line-height: 1.5;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #ede0d8;
+  border-left: 3px solid #d4364f;
+  padding-left: 18px;
+  line-height: 1.5;
 }
 
 .section-label {
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.35em;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 16px;
-padding-bottom: 10px;
-border-bottom: 1px solid var(–border);
-display: flex;
-align-items: center;
-gap: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4aa5a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .section-label::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: linear-gradient(90deg, var(–border), transparent);
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #2a1a1a, transparent);
 }
 
 section.bio-section { margin-bottom: 52px; }
 
-p.bio-p { margin-bottom: 14px; color: var(–text); }
+p.bio-p { margin-bottom: 14px; color: #ede0d8; }
 p.bio-p:last-child { margin-bottom: 0; }
-em { color: var(–pale-gold); font-style: italic; }
+em { color: #f0dfa0; font-style: italic; }
 
 /* ── PILLS ── */
 .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
 .pill {
-font-family: var(–mono);
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-padding: 4px 10px;
-border: 1px solid var(–border);
-color: #ccd4dc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid #2a1a1a;
+  color: #ccd4dc;
 }
-.pill.red { border-color: var(–red); color: var(–red); }
-.pill.green { border-color: var(–green); color: var(–green); }
+.pill.red { border-color: #d4364f; color: #d4364f; }
+.pill.green { border-color: #65b882; color: #65b882; }
 
 /* ── HEADER LAYOUT ── */
 .header-grid {
-display: grid;
-grid-template-columns: 220px 1fr;
-gap: 40px;
-align-items: start;
-border-top: 3px solid var(–text);
-border-bottom: 1px solid var(–text);
-padding: 32px 0 28px;
-margin-bottom: 52px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: start;
+  border-top: 3px solid #ede0d8;
+  border-bottom: 1px solid #ede0d8;
+  padding: 32px 0 28px;
+  margin-bottom: 52px;
 }
 
 .portrait-wrap { position: relative; }
 .portrait-wrap::before {
-content: ‘’;
-position: absolute;
-inset: -4px;
-background: linear-gradient(135deg, var(–gold), #5a1f52, var(–red), var(–gold));
-z-index: -1;
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(135deg, #d4aa5a, #5a1f52, #d4364f, #d4aa5a);
+  z-index: -1;
 }
 .portrait-wrap img { width: 100%; display: block; }
 
 /* ── STAT BLOCK ── */
 .stat-block {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 1px;
-background: var(–border);
-border: 1px solid var(–border);
-margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  background: #2a1a1a;
+  border: 1px solid #2a1a1a;
+  margin-bottom: 12px;
 }
 .stat-cell {
-background: var(–surface);
-padding: 14px 8px;
-text-align: center;
+  background: #0f0b0b;
+  padding: 14px 8px;
+  text-align: center;
 }
-.stat-mod { font-family: var(–mono); font-size: 11px; color: var(–red); font-weight: bold; display: block; }
-.stat-val { font-size: 28px; font-weight: bold; color: var(–pale-gold); line-height: 1; display: block; }
-.stat-name { font-family: var(–mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(–muted); }
+.stat-mod { font-family: 'Courier New', Courier, monospace; font-size: 11px; color: #d4364f; font-weight: bold; display: block; }
+.stat-val { font-size: 28px; font-weight: bold; color: #f0dfa0; line-height: 1; display: block; }
+.stat-name { font-family: 'Courier New', Courier, monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: #9a8590; }
 
 /* ── SPELL CARDS ── */
 .spell-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 12px;
-margin: 12px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 12px 0 20px;
 }
 .spell-card {
-background: var(–surface);
-border: 1px solid var(–border);
-border-top: 2px solid var(–green);
-padding: 14px 12px;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  border-top: 2px solid #65b882;
+  padding: 14px 12px;
 }
 .spell-card.cantrip { border-top-color: #5a1f52; }
-.spell-card-name { font-family: var(–mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(–pale-gold); margin-bottom: 3px; }
-.spell-card-type { font-family: var(–mono); font-size: 8px; color: var(–muted); margin-bottom: 4px; }
-.spell-card-meta { font-family: var(–mono); font-size: 8px; color: #5a7060; margin-bottom: 8px; }
+.spell-card-name { font-family: 'Courier New', Courier, monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #f0dfa0; margin-bottom: 3px; }
+.spell-card-type { font-family: 'Courier New', Courier, monospace; font-size: 8px; color: #9a8590; margin-bottom: 4px; }
+.spell-card-meta { font-family: 'Courier New', Courier, monospace; font-size: 8px; color: #5a7060; margin-bottom: 8px; }
 .spell-card-desc { font-size: 0.88em; font-style: italic; color: #c8b8b0; line-height: 1.4; }
 
 /* ── TRAIT CARDS ── */
 .trait-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 12px;
-margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
 }
 .trait-card {
-background: var(–surface);
-border: 1px solid var(–border);
-border-left: 3px solid #5a1f52;
-padding: 14px 16px;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  border-left: 3px solid #5a1f52;
+  padding: 14px 16px;
 }
-.trait-card.green { border-left-color: var(–green); }
-.trait-label { font-family: var(–mono); font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: var(–gold); margin-bottom: 6px; }
+.trait-card.green { border-left-color: #65b882; }
+.trait-label { font-family: 'Courier New', Courier, monospace; font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: #d4aa5a; margin-bottom: 6px; }
 
 /* ── WILD SHAPE BOX ── */
 .feature-box {
-background: var(–surface);
-border: 1px solid var(–border);
-border-left: 3px solid var(–green);
-padding: 14px 18px;
-margin-bottom: 24px;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  border-left: 3px solid #65b882;
+  padding: 14px 18px;
+  margin-bottom: 24px;
 }
-.feature-box-label { font-family: var(–mono); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(–green); margin-bottom: 4px; }
-.feature-box-title { font-family: var(–mono); font-size: 12px; color: var(–pale-gold); margin-bottom: 8px; }
+.feature-box-label { font-family: 'Courier New', Courier, monospace; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: #65b882; margin-bottom: 4px; }
+.feature-box-title { font-family: 'Courier New', Courier, monospace; font-size: 12px; color: #f0dfa0; margin-bottom: 8px; }
 
 /* ── DIVIDER ── */
 .divider {
-display: flex;
-align-items: center;
-gap: 16px;
-margin: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
 }
 .divider::before, .divider::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–border), transparent);
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a1a1a, transparent);
 }
-.divider span { font-size: 16px; color: var(–gold); opacity: 0.7; }
+.divider span { font-size: 16px; color: #d4aa5a; opacity: 0.7; }
 
 /* ── BAD BUNNY BOX ── */
 .bouncer-box {
-background: var(–surface);
-border: 1px solid var(–gold);
-padding: 20px 24px;
-margin-top: 16px;
-text-align: center;
-position: relative;
+  background: #0f0b0b;
+  border: 1px solid #d4aa5a;
+  padding: 20px 24px;
+  margin-top: 16px;
+  text-align: center;
+  position: relative;
 }
 .bouncer-box::before {
-content: ‘✦ STAFF RECORD ✦’;
-position: absolute;
-top: -9px; left: 50%;
-transform: translateX(-50%);
-font-family: var(–mono);
-font-size: 8px;
-letter-spacing: 0.3em;
-color: var(–gold);
-background: var(–bg);
-padding: 0 10px;
+  content: '✦ STAFF RECORD ✦';
+  position: absolute;
+  top: -9px; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  color: #d4aa5a;
+  background: #050203;
+  padding: 0 10px;
 }
 .bouncer-name {
-font-size: 1.4em;
-font-weight: bold;
-color: var(–pale-gold);
-display: block;
-margin-bottom: 6px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #f0dfa0;
+  display: block;
+  margin-bottom: 6px;
 }
 
 /* ── JOURNAL ── */
 .journal-form {
-background: var(–surface);
-border: 1px solid var(–border);
-padding: 24px;
-margin-bottom: 32px;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  padding: 24px;
+  margin-bottom: 32px;
 }
 .journal-form-title {
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 18px;
-padding-bottom: 10px;
-border-bottom: 1px solid var(–border);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d4aa5a;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a1a1a;
 }
 .form-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 12px;
-margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 .form-field {
-display: flex;
-flex-direction: column;
-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .form-field label {
-font-family: var(–mono);
-font-size: 8px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–muted);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9a8590;
 }
 .form-field input, .form-field select, .form-field textarea {
-background: var(–bg);
-border: 1px solid var(–border);
-color: var(–text);
-font-family: var(–fonts);
-font-size: 14px;
-padding: 8px 10px;
-outline: none;
-transition: border-color 0.2s;
-resize: vertical;
+  background: #050203;
+  border: 1px solid #2a1a1a;
+  color: #ede0d8;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
 }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-border-color: var(–gold);
+  border-color: #d4aa5a;
 }
-.form-field select option { background: var(–surface); }
+.form-field select option { background: #0f0b0b; }
 .form-full { grid-column: 1 / -1; }
 
 .roll-row {
-display: grid;
-grid-template-columns: 1fr 80px 1fr;
-gap: 12px;
-margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .btn {
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-padding: 10px 20px;
-border: none;
-cursor: pointer;
-font-weight: bold;
-transition: all 0.2s;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
 }
-.btn-gold { background: var(–gold); color: #050203; }
-.btn-gold:hover { background: var(–pale-gold); }
-.btn-red { background: transparent; border: 1px solid var(–red); color: var(–red); }
-.btn-red:hover { background: var(–red); color: #050203; }
+.btn-gold { background: #d4aa5a; color: #050203; }
+.btn-gold:hover { background: #f0dfa0; }
+.btn-red { background: transparent; border: 1px solid #d4364f; color: #d4364f; }
+.btn-red:hover { background: #d4364f; color: #050203; }
 .btn-sm { padding: 5px 10px; font-size: 9px; }
 
 /* ── JOURNAL ENTRIES ── */
 .journal-entries { display: flex; flex-direction: column; gap: 16px; }
 
 .journal-entry {
-background: var(–surface);
-border: 1px solid var(–border);
-border-left: 3px solid var(–gold);
-padding: 16px 20px;
-position: relative;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  border-left: 3px solid #d4aa5a;
+  padding: 16px 20px;
+  position: relative;
 }
-.journal-entry.crit { border-left-color: var(–pale-gold); }
-.journal-entry.fail { border-left-color: var(–red); }
-.journal-entry.success { border-left-color: var(–green); }
+.journal-entry.crit { border-left-color: #f0dfa0; }
+.journal-entry.fail { border-left-color: #d4364f; }
+.journal-entry.success { border-left-color: #65b882; }
 
 .entry-header {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-margin-bottom: 10px;
-flex-wrap: wrap;
-gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .entry-meta {
-font-family: var(–mono);
-font-size: 8px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–muted);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9a8590;
 }
 .entry-session {
-font-family: var(–mono);
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–gold);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4aa5a;
 }
 .entry-action {
-font-size: 1.05em;
-font-weight: bold;
-color: var(–pale-gold);
-margin-bottom: 6px;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #f0dfa0;
+  margin-bottom: 6px;
 }
 .entry-roll-line {
-display: flex;
-gap: 12px;
-align-items: center;
-flex-wrap: wrap;
-margin-bottom: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 .roll-badge {
-font-family: var(–mono);
-font-size: 11px;
-font-weight: bold;
-padding: 3px 10px;
-border: 1px solid var(–border);
-color: var(–pale-gold);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border: 1px solid #2a1a1a;
+  color: #f0dfa0;
 }
-.roll-badge.nat20 { border-color: var(–pale-gold); color: var(–pale-gold); background: rgba(240,223,160,0.1); }
-.roll-badge.nat1 { border-color: var(–red); color: var(–red); }
+.roll-badge.nat20 { border-color: #f0dfa0; color: #f0dfa0; background: rgba(240,223,160,0.1); }
+.roll-badge.nat1 { border-color: #d4364f; color: #d4364f; }
 .outcome-badge {
-font-family: var(–mono);
-font-size: 9px;
-letter-spacing: 0.15em;
-text-transform: uppercase;
-padding: 3px 10px;
-border: 1px solid;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid;
 }
-.outcome-badge.success { border-color: var(–green); color: var(–green); }
-.outcome-badge.fail { border-color: var(–red); color: var(–red); }
-.outcome-badge.crit { border-color: var(–pale-gold); color: var(–pale-gold); }
+.outcome-badge.success { border-color: #65b882; color: #65b882; }
+.outcome-badge.fail { border-color: #d4364f; color: #d4364f; }
+.outcome-badge.crit { border-color: #f0dfa0; color: #f0dfa0; }
 .outcome-badge.partial { border-color: #8b8b00; color: #d4d400; }
 
-.entry-npc { font-family: var(–mono); font-size: 9px; color: var(–muted); margin-bottom: 6px; }
-.entry-notes { font-style: italic; font-size: 0.92em; color: #c8b8b0; line-height: 1.5; border-top: 1px solid var(–border); padding-top: 8px; margin-top: 8px; }
+.entry-npc { font-family: 'Courier New', Courier, monospace; font-size: 9px; color: #9a8590; margin-bottom: 6px; }
+.entry-notes { font-style: italic; font-size: 0.92em; color: #c8b8b0; line-height: 1.5; border-top: 1px solid #2a1a1a; padding-top: 8px; margin-top: 8px; }
 .entry-delete { position: absolute; top: 12px; right: 12px; }
 
 .journal-empty {
-text-align: center;
-font-style: italic;
-color: var(–muted);
-padding: 48px 24px;
-border: 1px dashed var(–border);
+  text-align: center;
+  font-style: italic;
+  color: #9a8590;
+  padding: 48px 24px;
+  border: 1px dashed #2a1a1a;
 }
 
 .journal-filters {
-display: flex;
-gap: 8px;
-margin-bottom: 20px;
-flex-wrap: wrap;
-align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .journal-filters label {
-font-family: var(–mono);
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–muted);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9a8590;
 }
 .journal-filters select, .journal-filters input {
-background: var(–surface);
-border: 1px solid var(–border);
-color: var(–text);
-font-family: var(–mono);
-font-size: 10px;
-padding: 5px 8px;
-outline: none;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  color: #ede0d8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  padding: 5px 8px;
+  outline: none;
 }
 
 /* ── INCIDENT BOX ── */
 .incident-box {
-background: var(–surface);
-border: 1px solid var(–border);
-border-left: 3px solid var(–red);
-padding: 18px 20px;
-position: relative;
-margin-top: 12px;
+  background: #0f0b0b;
+  border: 1px solid #2a1a1a;
+  border-left: 3px solid #d4364f;
+  padding: 18px 20px;
+  position: relative;
+  margin-top: 12px;
 }
 .incident-label {
-font-family: var(–mono);
-font-size: 8px;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–red);
-margin-bottom: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d4364f;
+  margin-bottom: 6px;
 }
 .incident-title {
-font-size: 1.1em;
-font-weight: bold;
-color: var(–pale-gold);
-margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #f0dfa0;
+  margin-bottom: 10px;
 }
 
 /* ── DEITY SECTION ── */
 .deity-grid {
-display: grid;
-grid-template-columns: 64px 1fr;
-gap: 20px;
-align-items: start;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  align-items: start;
 }
-.deity-name { font-size: 1.2em; font-weight: bold; color: var(–pale-gold); margin-bottom: 5px; }
-.deity-title { font-family: var(–mono); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(–blue); margin-bottom: 10px; }
+.deity-name { font-size: 1.2em; font-weight: bold; color: #f0dfa0; margin-bottom: 5px; }
+.deity-title { font-family: 'Courier New', Courier, monospace; font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: #a0d8ef; margin-bottom: 10px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-.header-grid { grid-template-columns: 1fr; }
-.portrait-wrap { max-width: 200px; margin: 0 auto; }
-.stat-block { grid-template-columns: repeat(2,1fr); }
-.trait-grid { grid-template-columns: 1fr; }
-.form-grid { grid-template-columns: 1fr; }
-.roll-row { grid-template-columns: 1fr 1fr; }
-.tab { padding: 32px 20px 60px; }
+  .header-grid { grid-template-columns: 1fr; }
+  .portrait-wrap { max-width: 200px; margin: 0 auto; }
+  .stat-block { grid-template-columns: repeat(2,1fr); }
+  .trait-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .roll-row { grid-template-columns: 1fr 1fr; }
+  .tab { padding: 32px 20px 60px; }
 }
 
 #portraitWrap:hover #portraitOverlay { display:flex !important; }
 </style>
-
 </head>
 <body>
 
@@ -578,7 +577,6 @@ align-items: start;
 <!-- ══════════════════════════════════════════════════════════════
      TAB: OVERVIEW
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab active" id="tab-overview">
   <div class="header-grid">
     <div class="portrait-wrap">
@@ -611,7 +609,7 @@ align-items: start;
       <div class="stat-cell"><span class="stat-mod" data-save="mod-wis">+2</span><span class="stat-val" data-save="val-wis">14</span><span class="stat-name" data-save="sname-wis">Wisdom</span></div>
       <div class="stat-cell"><span class="stat-mod" data-save="mod-cha">+0</span><span class="stat-val" data-save="val-cha">9</span><span class="stat-name" data-save="sname-cha">Charisma</span></div>
     </div>
-    <p class="bio-p" style="font-style:italic;font-size:0.88em;color:var(--muted);" data-save="stat-note">A CHA of 9 on a woman who flirts with literally everyone is a character study in itself.</p>
+    <p class="bio-p" style="font-style:italic;font-size:0.88em;color:#9a8590;" data-save="stat-note">A CHA of 9 on a woman who flirts with literally everyone is a character study in itself.</p>
   </section>
 
   <div class="divider"><span>✦</span></div>
@@ -639,10 +637,10 @@ align-items: start;
   </section>
 </div>
 
+
 <!-- ══════════════════════════════════════════════════════════════
      TAB: LORE
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab" id="tab-lore">
   <div class="edit-hint">Click any text to edit it. Changes save automatically.</div>
 
@@ -666,7 +664,7 @@ align-items: start;
     <p class="bio-p" data-save="lore-drow1">Half-drow is a complicated inheritance. The Underdark carries baggage that follows you to the surface: the sidelong looks, the assumptions, the reflexive distrust from people who have heard the stories. Clem has developed what might generously be called a defense mechanism — she fills every room before anyone can define the atmosphere for her. She is louder than the whispers. She is warmer than the reputation.</p>
     <p class="bio-p" data-save="lore-drow2">Her mother was drow nobility — powerful, matriarchal, and dangerous in the way that only people with real authority can be. Her father, a surface-dweller who had loved the wrong woman, got them out. He brought Clem up into the light before her mother's world could fully claim her. There is a scar beneath his eye, and when she looks at it, she remembers exactly why they left.</p>
     <p class="bio-p" data-save="lore-drow3">She misses parts of it anyway. Grief doesn't require that the thing you lost was good. She knows this. She keeps moving.</p>
-    <p class="bio-p" style="border-left:2px solid var(--purple);padding-left:16px;font-style:italic;color:#ddd0d8;" data-save="lore-drow4">Magic cannot put her to sleep, and enchantments that would bend another's will simply slide off her. She sees 120 feet in the dark. She has sunlight sensitivity, which she manages. She doesn't talk about the Underdark.</p>
+    <p class="bio-p" style="border-left:2px solid #c8a0c8;padding-left:16px;font-style:italic;color:#ddd0d8;" data-save="lore-drow4">Magic cannot put her to sleep, and enchantments that would bend another's will simply slide off her. She sees 120 feet in the dark. She has sunlight sensitivity, which she manages. She doesn't talk about the Underdark.</p>
   </section>
 
   <section class="bio-section">
@@ -700,10 +698,10 @@ align-items: start;
   </section>
 </div>
 
+
 <!-- ══════════════════════════════════════════════════════════════
      TAB: SPELLS
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab" id="tab-spells">
   <div class="edit-hint">Click spell descriptions to edit them.</div>
 
@@ -773,14 +771,14 @@ align-items: start;
         <div class="spell-card-desc" data-save="spell-healing">She can do this from across the room without looking up from her drink. She does. Regularly.</div>
       </div>
     </div>
-    <p class="bio-p" style="font-style:italic;font-size:0.88em;color:var(--muted);margin-top:12px;">She will heal you. She will also Thunderwave you out a window. These are not mutually exclusive.</p>
+    <p class="bio-p" style="font-style:italic;font-size:0.88em;color:#9a8590;margin-top:12px;">She will heal you. She will also Thunderwave you out a window. These are not mutually exclusive.</p>
   </section>
 </div>
+
 
 <!-- ══════════════════════════════════════════════════════════════
      TAB: TRAITS
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab" id="tab-traits">
   <div class="edit-hint">Click any text to edit it.</div>
 
@@ -831,10 +829,10 @@ align-items: start;
   </section>
 </div>
 
+
 <!-- ══════════════════════════════════════════════════════════════
      TAB: THE ESTABLISHMENT
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab" id="tab-establishment">
   <div class="edit-hint">Click any text to edit it.</div>
 
@@ -843,31 +841,28 @@ align-items: start;
     <p class="bio-p" data-save="est-p1">Clem's bar is hers in the way that matters — built, stocked, and run on her own terms. The apothecary in the back does a brisk business. She doesn't ask too many questions about what people need the tinctures for. The bar up front is warm, the drinks are strong, and the atmosphere is whatever she decides it is that evening.</p>
     <p class="bio-p" data-save="est-p2">Security is handled.</p>
 
-```
-<div class="bouncer-box" data-save="bouncer-box">
-  <span class="bouncer-name" data-save="bunny-name">Bad Bunny</span>
-  <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:90px;display:block;margin:8px auto;">
-    <ellipse cx="60" cy="68" rx="22" ry="18" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
-    <ellipse cx="60" cy="44" rx="14" ry="12" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
-    <path d="M52 34 Q48 14 50 6 Q54 14 56 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M68 34 Q70 12 70 4 Q72 12 72 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <circle cx="55" cy="42" r="1.5" fill="#d4aa5a"/>
-    <circle cx="65" cy="42" r="1.5" fill="#d4aa5a"/>
-    <line x1="52" y1="39" x2="58" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-    <line x1="62" y1="39" x2="68" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-    <ellipse cx="60" cy="47" rx="2" ry="1.2" fill="#d4aa5a" opacity="0.8"/>
-    <line x1="57" y1="50" x2="63" y2="50" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
-    <path d="M38 62 Q44 58 50 62 Q48 70 42 72 Q36 70 38 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-    <path d="M82 62 Q76 58 70 62 Q72 70 78 72 Q84 70 82 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-    <ellipse cx="50" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-    <ellipse cx="70" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
-    <circle cx="82" cy="72" r="5" stroke="#d4aa5a" stroke-width="1.2" fill="none" stroke-dasharray="2 1.5"/>
-    <rect x="52" y="55" width="16" height="9" rx="1.5" stroke="#d4aa5a" stroke-width="0.8" fill="none" opacity="0.6"/>
-  </svg>
-  <p class="bio-p" style="font-style:italic;" data-save="bunny-desc">Bouncer. Loyal. Does not elaborate. Has never once needed to.</p>
-</div>
-```
-
+    <div class="bouncer-box" data-save="bouncer-box">
+      <span class="bouncer-name" data-save="bunny-name">Bad Bunny</span>
+      <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:90px;display:block;margin:8px auto;">
+        <ellipse cx="60" cy="68" rx="22" ry="18" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
+        <ellipse cx="60" cy="44" rx="14" ry="12" stroke="#d4aa5a" stroke-width="1.5" fill="none"/>
+        <path d="M52 34 Q48 14 50 6 Q54 14 56 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M68 34 Q70 12 70 4 Q72 12 72 34" stroke="#d4aa5a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="55" cy="42" r="1.5" fill="#d4aa5a"/>
+        <circle cx="65" cy="42" r="1.5" fill="#d4aa5a"/>
+        <line x1="52" y1="39" x2="58" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="62" y1="39" x2="68" y2="39" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+        <ellipse cx="60" cy="47" rx="2" ry="1.2" fill="#d4aa5a" opacity="0.8"/>
+        <line x1="57" y1="50" x2="63" y2="50" stroke="#d4aa5a" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M38 62 Q44 58 50 62 Q48 70 42 72 Q36 70 38 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+        <path d="M82 62 Q76 58 70 62 Q72 70 78 72 Q84 70 82 62Z" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+        <ellipse cx="50" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+        <ellipse cx="70" cy="84" rx="9" ry="4" stroke="#d4aa5a" stroke-width="1.3" fill="none"/>
+        <circle cx="82" cy="72" r="5" stroke="#d4aa5a" stroke-width="1.2" fill="none" stroke-dasharray="2 1.5"/>
+        <rect x="52" y="55" width="16" height="9" rx="1.5" stroke="#d4aa5a" stroke-width="0.8" fill="none" opacity="0.6"/>
+      </svg>
+      <p class="bio-p" style="font-style:italic;" data-save="bunny-desc">Bouncer. Loyal. Does not elaborate. Has never once needed to.</p>
+    </div>
   </section>
 
   <div class="divider"><span>✦</span></div>
@@ -881,7 +876,7 @@ align-items: start;
       <p class="bio-p" data-save="incident-p2">She rolled a 20.</p>
       <p class="bio-p" data-save="incident-p3">He went across the room. She watched him go. She did not apologize. She tilted her head slightly, the way you do when something surprises even you, and then she straightened her coat and asked if anyone else had questions.</p>
       <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-        <div style="width:46px;height:46px;border:2px solid var(--red);border-radius:6px;display:flex;align-items:center;justify-content:center;">
+        <div style="width:46px;height:46px;border:2px solid #d4364f;border-radius:6px;display:flex;align-items:center;justify-content:center;">
           <svg viewBox="0 0 40 40" fill="none" style="width:34px;height:34px;">
             <polygon points="20,3 37,13 37,27 20,37 3,27 3,13" stroke="#d4364f" stroke-width="1.5" fill="none"/>
             <line x1="20" y1="3" x2="20" y2="14" stroke="#d4364f" stroke-width="0.6" opacity="0.4"/>
@@ -895,18 +890,18 @@ align-items: start;
           </svg>
         </div>
         <div>
-          <div style="font-family:var(--mono);font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:3px;">Natural 20</div>
-          <div style="font-style:italic;color:var(--muted);font-size:0.88em;">Intended: playful intimidation. Result: airborne dwarf. No further questions.</div>
+          <div style="font-family:'Courier New', Courier, monospace;font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:#d4364f;margin-bottom:3px;">Natural 20</div>
+          <div style="font-style:italic;color:#9a8590;font-size:0.88em;">Intended: playful intimidation. Result: airborne dwarf. No further questions.</div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+
 <!-- ══════════════════════════════════════════════════════════════
      TAB: JOURNAL
 ═══════════════════════════════════════════════════════════════ -->
-
 <div class="tab" id="tab-journal">
 
   <div class="journal-form">
@@ -985,7 +980,7 @@ align-items: start;
       <option value="crit">Nat 20</option>
       <option value="partial">Partial</option>
     </select>
-    <input type="text" id="filter-search" placeholder="Search..." oninput="renderEntries()" style="background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:10px;padding:5px 8px;outline:none;">
+    <input type="text" id="filter-search" placeholder="Search..." oninput="renderEntries()" style="background:#0f0b0b;border:1px solid #2a1a1a;color:#ede0d8;font-family:'Courier New', Courier, monospace;font-size:10px;padding:5px 8px;outline:none;">
     <button class="btn btn-red btn-sm" onclick="exportJournal()" style="margin-left:auto;">↓ Export</button>
     <button class="btn btn-red btn-sm" onclick="clearAllEntries()">✕ Clear All</button>
   </div>
@@ -994,6 +989,7 @@ align-items: start;
     <div class="journal-empty">No entries yet. Log your first action above.</div>
   </div>
 </div>
+
 
 <script>
 // ── TABS ───────────────────────────────────────────────────────────────────────
@@ -1139,7 +1135,7 @@ function renderEntries() {
       <div class="entry-action">${e.action}</div>
       <div class="entry-roll-line">
         ${rollBadge(e.die, e.roll)}
-        ${e.mod ? `<span style="font-family:var(--mono);font-size:10px;color:var(--muted);">mod: ${e.mod}</span>` : ''}
+        ${e.mod ? `<span style="font-family:'Courier New', Courier, monospace;font-size:10px;color:#9a8590;">mod: ${e.mod}</span>` : ''}
         ${outcomeBadge(e.outcome)}
       </div>
       ${e.npc ? `<div class="entry-npc">NPC: ${e.npc}</div>` : ''}
@@ -1202,6 +1198,5 @@ renderEntries();
 // Set today's date in journal form
 document.getElementById('j-date').valueAsDate = new Date();
 </script>
-
 </body>
 </html>
